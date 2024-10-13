@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/609a41c362.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>my groceries</h1>
+    </header>
+    <main>
+        <div class="shop">
+            <div class="shopsHeader">
+                <h2>choose your shop</h2>
+            </div>
+            <!-- left part about shops -->
+            <div class="shopsMain">
+                <ul class="listOfShops">
+                    <li class="activeShop oneShop">Lidl
+                        <button class="activeButton"><i class="fa-solid fa-trash-can"></i></i></button>
+                    </li>
+                    <li class="oneShop">Biedronka
+                        <button class="inactiveButton"><i class="fa-solid fa-trash-can"></i></button>
+                    </li>
+                    <li class="oneShop">Auchan</li>
+                    <li class="oneShop">Tesco</li>
+                </ul>
+                <p>Please, enter name of your shop:</p>
+                <form action="">
+                <input class="inputShop" type="text" placeholder="Add Your shop" >
+                <button class="addShop">+</button>
+                </form>
+            </div>            
+        </div>
+
+        <!-- right part about items -->
+        <div class="item">
+            <div class="itemsHeader">
+                <h2>Lidl</h2>
+            </div>
+            <div class="itemsMain">
+                <ul class="listOfItems">
+                    <li class="oneItem checkedItem">Bread</li>
+                    <li class="oneItem">Milk</li>
+                    <li class="oneItem">Strawberry</li>
+                    <li class="oneItem">Blueberry</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

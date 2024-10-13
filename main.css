@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(224, 224, 224, 1) 10%, rgba(30, 75, 115, 1) 90%);
+}
+header{
+    width: 100vw;
+    height: 10vh;
+    position: relative;
+    text-align: center;
+}
+h1{
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 90px;
+    color: rgb(30, 75, 115);
+}
+main{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+/* positioning of of main elements */
+.shop, .item{
+    width: 40vw;
+    height: 80vh;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.shopsHeader, .itemsHeader{
+    width: 100%;
+    height: 20%;
+    border-bottom: 2px solid white;
+
+}
+.shopsMain, .itemsMain{
+    width: 100%;
+    height: 80%;
+}
+
+/* syles for shop header and shop list */
+.shopsMain{
+    display: flex;
+    flex-direction: column;
+}
+h2{
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: white;
+    -webkit-text-stroke: .2px rgb(30, 75, 115);
+}
+.listOfShops{
+    width: 100%;
+    height: 90%;
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  
+    align-items: center;
+}
+.oneShop{
+    width: 95%;
+    height: 50px;
+    position: inherit;
+    top: 50px;
+    background-color: rgba(30, 75, 115, .7);
+    color: white;
+    border-radius: 15px;
+    line-height: 50px;
+    padding-left: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 1s ease;
+}
+.oneShop:not(.activeShop):hover{
+    padding-left: 75px;
+}
+.activeButton, .inactiveButton{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    transition: .5s ease;
+}
+.inactiveButton:hover, .activeButton:hover{
+    scale: 1.2;
+    animation: shake .5s ease
+}
+@keyframes shake {
+    0%{rotate: 15deg;}
+    25%{rotate: -15deg;}
+    50%{rotate: 15deg;}
+    75%{rotate: -15deg;}
+    100%{rotate: 0deg;}
+}
+/* everything about active list */
+.activeShop{
+    background-color: white;
+    color: rgb(30, 75, 115);
+    padding-left: 0;
+    text-align: center;
+    border: 1px solid rgb(30, 75, 115);
+}
+.activeButton{
+    color: rgb(30, 75, 115) ;
+}
+form{
+    height: 50px;
+    border-radius: 0 0 15px 15px;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+p{
+    height: 30px;
+    color: white;
+    background-color: transparent;
+    padding-left: 25px;
+    line-height: 30px;
+}
+.inputShop{
+    height: 100%;
+    width: 90%;
+    padding-left: 25px;
+    border: none;
+    border-top: 2px solid white;
+    border-radius: 0 0 0 12px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(30, 75, 115);
+    outline: none;
+}
+.addShop{
+    height: 100%;
+    width: 10%;
+    border: none;
+    border-top: 2px solid white;
+    border-radius: 0 0 12px 0;
+    background-color: rgb(30, 75, 115);
+    color: white;
+    font-size: 20px;
+    cursor:pointer;
+}
+
+.inputShop::placeholder{
+    color: white;
+}
+
+/* styles of items */
+.itemsHeader h2{
+    line-height: 100px;
+}
